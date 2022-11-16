@@ -17,7 +17,9 @@ import {
 
 const config: HardhatUserConfig = {
 	defaultNetwork: "hardhat",
-	solidity: "0.8.17",
+	solidity: {
+		compilers: [{ version: "0.8.17" }, { version: "0.4.19" }],
+	},
 	networks: {
 		goerli: {
 			url: GOERLI_RPC_URL,
