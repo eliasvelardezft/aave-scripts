@@ -13,6 +13,7 @@ import {
 	LOCALHOST_RPC_URL,
 	ETHERSCAN_API_KEY,
 	COINMARKETCAP_API_KEY,
+	MAINNET_RPC_URL,
 } from "./helper-hardhat-config";
 
 const config: HardhatUserConfig = {
@@ -21,6 +22,11 @@ const config: HardhatUserConfig = {
 		compilers: [{ version: "0.8.17" }, { version: "0.4.19" }],
 	},
 	networks: {
+		hardhat: {
+			forking: {
+				url: MAINNET_RPC_URL!,
+			},
+		},
 		goerli: {
 			url: GOERLI_RPC_URL,
 			accounts: [GOERLI_PRIVATE_KEY!],
@@ -41,10 +47,7 @@ const config: HardhatUserConfig = {
 		coinmarketcap: COINMARKETCAP_API_KEY,
 	},
 	namedAccounts: {
-		owner: 0,
-		teamMember: 1,
-		funder1: 2,
-		funder2: 3,
+		deployer: 0,
 	},
 };
 
