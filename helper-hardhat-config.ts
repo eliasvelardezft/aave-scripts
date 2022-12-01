@@ -11,10 +11,17 @@ export const {
 	WETH_MAINNET_ADDRESS,
 	MAINNET_RPC_URL,
 	MAINNET_LENDINGPOOLADDRESSESPROVIDER_ADDRESS,
+	MAINNET_AGGREGATORV3_ADDRESS,
+	DAI_TOKEN_MAINNET,
 	// api keys
 	ETHERSCAN_API_KEY,
 	COINMARKETCAP_API_KEY,
 } = process.env;
+
+export enum InterestRateMode {
+	STABLE = 1,
+	VARIABLE = 2,
+}
 
 // network config
 interface networkConfigItem {

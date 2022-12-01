@@ -19,7 +19,12 @@ import {
 const config: HardhatUserConfig = {
 	defaultNetwork: "hardhat",
 	solidity: {
-		compilers: [{ version: "0.8.17" }, { version: "0.6.12" }, { version: "0.4.19" }],
+		compilers: [
+			{ version: "0.8.17" },
+			{ version: "0.8.0" },
+			{ version: "0.6.12" },
+			{ version: "0.4.19" },
+		],
 	},
 	networks: {
 		hardhat: {
